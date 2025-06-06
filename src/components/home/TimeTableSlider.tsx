@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import type { DayData } from '@/types/types'; // Ensure you import the correct type
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import React from 'react';
-import { timetableData } from './TimeTableData';
-import { TimeTableDay } from './TimeTableDay';
+import type { DayData } from "@/types/types"; // Ensure you import the correct type
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import React from "react";
+import { timetableData } from "./TimeTableData";
+import { TimeTableDay } from "./TimeTableDay";
 
 type TimeTableSliderProps = {
   currentDay: number;
@@ -13,7 +13,7 @@ type TimeTableSliderProps = {
 };
 
 // Default empty schedule to prevent errors
-const defaultDayData: DayData = { day: 'No Data', schedule: [] };
+const defaultDayData: DayData = { day: "No Data", schedule: [] };
 
 export const TimeTableSlider = ({
   currentDay,
@@ -24,7 +24,7 @@ export const TimeTableSlider = ({
   const currentDayData: DayData = timetableData[currentDay] ?? defaultDayData;
 
   return (
-    <div className="group relative h-full">
+    <div className="group relative h-full w-full">
       <div className="h-full overflow-hidden rounded-lg">
         <TimeTableDay day={currentDayData} />
       </div>
@@ -55,7 +55,7 @@ export const TimeTableSlider = ({
           <div
             key={day.day} // Use 'day.day' instead of index if it's unique
             className={`size-2 rounded-full ${
-              currentDay === index ? 'bg-white' : 'bg-white/50'
+              currentDay === index ? "bg-white" : "bg-white/50"
             }`}
           />
         ))}
