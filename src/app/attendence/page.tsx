@@ -2,9 +2,9 @@ export default function Home() {
   return (
     <div>
       <p>
-        In this dynamic page, when you click any bus button, the UI/UX for all bus locations remains the same. 
-        We use a dynamic page system so that clicking on, for example, the "Bus 1" button redirects here, 
-        but the displayed content updates to show the respective bus's location.
+        basically this is a page where the user can see their attendance not  puttin green if they were present 
+        but rather it is made ot so they can see how many classes they have missed 
+        so in the end they will know which day they were absent and how many classes they have missed in total
       </p>
     </div>
   );

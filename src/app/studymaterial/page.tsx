@@ -2,9 +2,15 @@ export default function Home() {
   return (
     <div>
       <p>
-        In this dynamic page, when you click any bus button, the UI/UX for all bus locations remains the same. 
-        We use a dynamic page system so that clicking on, for example, the "Bus 1" button redirects here, 
-        but the displayed content updates to show the respective bus's location.
+        in this page we need folder like strucutre basically you will dynamic slect the folder basically if there cse mech 
+        then slect cse the website should autoamtically all the folder inside the cse folder like taht 
+        then 
+        -2019 and 2024 schema 
+        -deptmarntent 
+        -sem 
+        -subject 
+        -notebook,textbook,question paper,notes,syllabus,previous year question paper,lab manual,lab record,lab experiment
+        -module wise or quesiton year wise questions
       </p>
     </div>
   );
