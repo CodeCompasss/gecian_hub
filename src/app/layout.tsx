@@ -1,16 +1,16 @@
-import BottomNavBar from '@/components/bottemNavbar';
-import TopNavBar from '@/components/topNavbar';
-import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
+import BottomNavBar from "@/components/bottomNavbar";
+import TopNavBar from "@/components/topNavbar";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
 
 const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
 });
 
 export default function RootLayout({
@@ -20,13 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* <link rel="manifest" href="/manifest.ts" /> */}
-      </head>
+      <head>{/* <link rel="manifest" href="/manifest.ts" /> */}</head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <TopNavBar userName="John Doe" />
+        <TopNavBar userName="John Doe" semester={4} department="CSE" />
 
         {children}
 

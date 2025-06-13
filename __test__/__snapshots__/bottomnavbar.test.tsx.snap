@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BottomNavBar Component matches snapshot 1`] = `
+<DocumentFragment>
+  <nav
+    class="fixed left-6 right-6 bottom-8 border-t border-gray-300 bg-[var(--main)] text-foreground rounded-2xl"
+  >
+    <ul
+      class="flex items-center justify-around py-2"
+    >
+      <li
+        class="flex flex-col items-center"
+      >
+        <button
+          class="focus:outline-none"
+          type="button"
+        >
+          <div
+            data-testid="home-icon"
+          />
+        </button>
+      </li>
+      <li
+        class="flex flex-col items-center"
+      >
+        <button
+          class="focus:outline-none"
+          type="button"
+        >
+          <div
+            data-testid="book-icon"
+          />
+        </button>
+      </li>
+      <li
+        class="flex flex-col items-center"
+      >
+        <button
+          class="focus:outline-none"
+          type="button"
+        >
+          <div
+            data-testid="calendar-icon"
+          />
+        </button>
+      </li>
+      <li
+        class="flex flex-col items-center"
+      >
+        <button
+          class="focus:outline-none"
+          type="button"
+        >
+          <div
+            data-testid="money-icon"
+          />
+        </button>
+      </li>
+    </ul>
+  </nav>
+</DocumentFragment>
+`;
