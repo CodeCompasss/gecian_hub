@@ -1,5 +1,4 @@
-import BottomNavBar from "@/components/bottomNavbar";
-import TopNavBar from "@/components/topNavbar";
+import BottomNavBar from "../components/bottomNavbar";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -24,7 +23,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <TopNavBar userName="John Doe" semester={4} department="CSE" />
+        
 
         {children}
 
