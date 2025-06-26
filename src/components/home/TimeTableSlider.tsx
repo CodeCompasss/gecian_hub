@@ -23,7 +23,7 @@ export const TimeTableSlider = ({
   return (
     <div className="group relative w-full h-full min-h-0 flex flex-col">
       {/* Main timetable content - expands to fill available space */}
-      <div className="flex-1 min-h-0 overflow-hidden rounded-lg">
+      <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden rounded-lg">
         <div className="w-full h-full">
           <TimeTableDay day={currentDayData} />
         </div>

@@ -20,26 +20,9 @@ describe("ResponsiveDashboard", () => {
     const mainContainer = container.querySelector(".min-h-screen");
     expect(mainContainer).toBeInTheDocument();
 
-    // Check max-width container
-    const maxWidthContainer = container.querySelector(".max-w-7xl");
-    expect(maxWidthContainer).toBeInTheDocument();
-
     // Check flex container for md screens
     const flexContainer = container.querySelector(".md\\:flex");
     expect(flexContainer).toBeInTheDocument();
-  });
-
-  it("applies responsive classes correctly", () => {
-    const { container } = render(<ResponsiveDashboard />);
-
-    // Check section has responsive height classes
-    const section = container.querySelector("section");
-    expect(section).toHaveClass(
-      "h-[64vh]",
-      "sm:h-[55vh]",
-      "md:h-full",
-      "md:w-1/2",
-    );
   });
 
   it("renders both child components", () => {

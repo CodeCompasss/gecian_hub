@@ -1,6 +1,5 @@
-"use client";
 import { QuickActions } from "./QuickActions";
-import { TimeTableBlock } from "./TimeTable";
+import TimeTableBlock from "./TimeTable"; // updated to default export
 
 const ResponsiveDashboard = () => {
   return (
@@ -8,7 +7,7 @@ const ResponsiveDashboard = () => {
       <div className="mx-auto max-w-[var(--max-screen-size)] pt-4">
         <main className="px-3 pb-24">
           <div className="md:flex lg:h-[calc(100vh-12rem)] md:gap-6 lg:gap-8">
-            <section className="flex flex-col justify-center h-[64vh] w-full md:h-full md:w-1/2 mx-auto">
+            <section className="flex flex-col justify-center w-full md:h-full md:w-1/2 mx-auto">
               <TimeTableBlock />
             </section>
             <QuickActions />
