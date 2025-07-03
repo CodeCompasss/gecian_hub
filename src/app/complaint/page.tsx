@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState,useEffect } from 'react';
 import ComplaintCard from '@/components/complaint/Complaintcard';
 import Tabs from '@/components/complaint/Tabs';
 import Link from 'next/link';
@@ -22,7 +22,7 @@ export default function ComplaintPage() {
   const [selectedTab, setSelectedTab] = useState<'solved' | 'unsolved'>('unsolved');
   const [complaints, setComplaints] = useState<Complaint[]>([]);
 
-  /*useEffect(() => {
+  useEffect(() => {
     async function fetchComplaints() {
       try {
         const response = await fetch('/api/complaints');
@@ -37,7 +37,7 @@ export default function ComplaintPage() {
     }
 
     fetchComplaints();
-  }, [])*/
+  }, []);
 
   return (
     <div className="min-h-screen p-4 pb-28 bg-gray-100">

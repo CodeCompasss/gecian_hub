@@ -3,7 +3,7 @@
 exports[`BottomNavBar Component matches snapshot 1`] = `
 <DocumentFragment>
   <nav
-    class="fixed left-6 right-6 bottom-8 border-t border-gray-300 bg-[var(--main)] text-foreground rounded-2xl"
+    class="fixed left-6 right-6 bottom-8 border-t border-gray-300 bg-[var(--main)] max-w-[var(--max-screen-size)] mx-auto text-foreground rounded-2xl"
   >
     <ul
       class="flex items-center justify-around py-2"

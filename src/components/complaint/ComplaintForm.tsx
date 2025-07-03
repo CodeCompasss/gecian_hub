@@ -1,5 +1,6 @@
 'use client';
 import { useState, ChangeEvent, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function ComplaintForm() {
   const [title, setTitle] = useState('');
@@ -7,6 +8,7 @@ export default function ComplaintForm() {
   const [place, setPlace] = useState('');
   const [image, setImage] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+  const router = useRouter();
 
   const handleImageUpload = (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -34,26 +36,36 @@ export default function ComplaintForm() {
     }
 
     let imageUrl = null;
-    try {
-      imageUrl = await toBase64(image);
-    } catch (err) {
-      console.error('Error converting image:', err);
-      alert('Failed to convert image.');
-      return;
+    if (image) {
+      try {
+        imageUrl = await toBase64(image); // Convert to base64
+      } catch (err) {
+        console.error('Error converting image to base64:', err);
+        alert('Failed to process image. Please try again.');
+        return;
+      }
     }
 
-    // ⛔ Don't actually send to API now
-    const formData = { title, description, place, imageUrl };
-    console.log('📝 Collected Complaint Data:', formData);
+   console.log('Request body:', { title, description, place, imageUrl });
 
-    alert('Form submitted (not sent to backend). Check console for data.');
-    
-    // Reset fields (optional)
-    setTitle('');
-    setDescription('');
-    setPlace('');
-    setImage(null);
-    setPreviewUrl(null);
+    try {
+      const response = await fetch('/api/complaints', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, description, place, imageUrl })
+      });
+      if (!response.ok) {
+        const errorData = await response.text();
+        console.error('Response status:', response.status);
+        console.error('Response text:', errorData);
+        throw new Error(`Failed to submit complaint: ${errorData || 'Unknown error'}`);
+      }
+      const data = await response.json();
+      console.log('Submit response:', data);
+      router.push('/complaint');
+    } catch (err) {
+      console.error('Error submitting complaint:', err);
+    }
   };
 
   return (
