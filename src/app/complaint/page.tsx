@@ -2,9 +2,9 @@ export default function Home() {
   return (
     <div>
       <p>
-        In this dynamic page, when you click any bus button, the UI/UX for all bus locations remains the same. 
-        We use a dynamic page system so that clicking on, for example, the "Bus 1" button redirects here, 
-        but the displayed content updates to show the respective bus's location.
+        the most importnetn thing is it need to be annoynmous but the suer who posted it should be able to delete or obivoulsy admin need to able to dlete it as well
+        it need stackoverflow  like each complaint need to able to upvote or downvote 
+        also filter latest popular etc 
       </p>
     </div>
   );

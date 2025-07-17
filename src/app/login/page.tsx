@@ -1,3 +1,4 @@
+//if the login  page if the user is not in the database then they need to redirect to new user fill forum basically ask some item form them
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';

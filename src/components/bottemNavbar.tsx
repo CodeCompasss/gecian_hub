@@ -1,3 +1,5 @@
+'use client'; 
+import Link from 'next/link';
 import { Calendar, ClipboardList, HelpCircle, Home, User } from 'lucide-react';
 
 const BottomNavBar = () => {
@@ -6,37 +8,37 @@ const BottomNavBar = () => {
       <ul className="flex items-center justify-around py-2">
         {/* Home */}
         <li className="flex flex-col items-center">
-          <button type="button" className="focus:outline-none">
+          <Link href="/" className="focus:outline-none">
             <Home className="size-6" />
-          </button>
+          </Link>
         </li>
 
         {/* Calendar */}
         <li className="flex flex-col items-center">
-          <button type="button" className="focus:outline-none">
+          <Link href="/" className="focus:outline-none">
             <Calendar className="size-6" />
-          </button>
+          </Link>
         </li>
 
         {/* User */}
         <li className="flex flex-col items-center">
-          <button type="button" className="focus:outline-none">
+          <Link href="/" className="focus:outline-none">
             <User className="size-6" />
-          </button>
+          </Link>
         </li>
 
         {/* Help Circle */}
         <li className="flex flex-col items-center">
-          <button type="button" className="focus:outline-none">
+          <Link href="/" className="focus:outline-none">
             <HelpCircle className="size-6" />
-          </button>
+          </Link>
         </li>
 
-        {/* Clipboard List */}
+        {/* Clipboard List (Expense) */}
         <li className="flex flex-col items-center">
-          <button type="button" className="focus:outline-none">
+          <Link href="/expanse" className="focus:outline-none">
             <ClipboardList className="size-6" />
-          </button>
+          </Link>
         </li>
       </ul>
     </nav>
